@@ -2,7 +2,7 @@
 ''' Name: Matthew Carmona
 ''' Date: 2/9/18
 ''' Project: Checkers
-''' Updated: 2/13/19
+''' Updated: 2/14/19
 ''' </summary>
 Public Class Form1
     Dim playerPiece As String
@@ -20,6 +20,8 @@ Public Class Form1
     Dim whiteSixCurrentLocationX = whiteSixStartingLocationX, whiteSixCurrentLocationY = whiteSixStartingLocationY
     Dim whiteSevenStartingLocationX = 412, whiteSevenStartingLocationY = 477
     Dim whiteSevenCurrentLocationX = whiteSevenStartingLocationX, whiteSevenCurrentLocationY = whiteSevenStartingLocationY
+    Dim whiteEightStartingLocationX = 572, whiteEightStartingLocationY = 477
+    Dim whiteEightCurrentLocationX = whiteEightStartingLocationX, whiteEightCurrentLocationY = whiteEightStartingLocationY
     Dim isKing = False
 
     Dim A2X = 12, A2Y = 87, A4X = 12, A4Y = 243, A6X = 12, A6Y = 399
@@ -38,7 +40,7 @@ Public Class Form1
 
     Dim G2X = 492, G2Y = 87, G4X = 492, G4Y = 243, G6X = 492, G6Y = 399
 
-    Dim H1X = 572, H1Y = 9, H3X = 572, H3Y = 165, H5X = 572, H5Y = 321
+    Dim H1X = 572, H1Y = 9, H3X = 572, H3Y = 165, H5X = 572, H5Y = 321, H7X = 572, H7Y = 477
 
     'White pieces
     Private Sub picWhite1_Click(sender As Object, e As EventArgs) Handles picWhite1.Click
@@ -174,6 +176,10 @@ Public Class Form1
             picWhite7.Location = New Point(B1X, B1Y)
             whiteSevenCurrentLocationX = B1X
             whiteSevenCurrentLocationY = B1Y
+        ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = C2X And whiteEightCurrentLocationY = C2Y And isKing = False Then
+            picWhite8.Location = New Point(B1X, B1Y)
+            whiteEightCurrentLocationX = B1X
+            whiteEightCurrentLocationY = B1Y
         End If
     End Sub
     Private Sub btnB3_Click(sender As Object, e As EventArgs) Handles btnB3.Click
@@ -294,6 +300,10 @@ Public Class Form1
             picWhite7.Location = New Point(C2X, C2Y)
             whiteSevenCurrentLocationX = C2X
             whiteSevenCurrentLocationY = C2Y
+        ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = D3X And whiteEightCurrentLocationY = D3Y And isKing = False Then
+            picWhite8.Location = New Point(C2X, C2Y)
+            whiteEightCurrentLocationX = C2X
+            whiteEightCurrentLocationY = C2Y
         End If
     End Sub
     Private Sub btnC4_Click(sender As Object, e As EventArgs) Handles btnC4.Click
@@ -451,6 +461,10 @@ Public Class Form1
             picWhite7.Location = New Point(D3X, D3Y)
             whiteSevenCurrentLocationX = D3X
             whiteSevenCurrentLocationY = D3Y
+        ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = E4X And whiteEightCurrentLocationY = E4Y And isKing = False Then
+            picWhite8.Location = New Point(D3X, D3Y)
+            whiteEightCurrentLocationX = D3X
+            whiteEightCurrentLocationY = D3Y
         End If
     End Sub
     Private Sub btnD5_Click(sender As Object, e As EventArgs) Handles btnD5.Click
@@ -586,6 +600,10 @@ Public Class Form1
             picWhite7.Location = New Point(E4X, E4Y)
             whiteSevenCurrentLocationX = E4X
             whiteSevenCurrentLocationY = E4Y
+        ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = F5X And whiteEightCurrentLocationY = F5Y And isKing = False Then
+            picWhite8.Location = New Point(E4X, E4Y)
+            whiteEightCurrentLocationX = E4X
+            whiteEightCurrentLocationY = E4Y
         End If
     End Sub
     'Column F
@@ -712,6 +730,10 @@ Public Class Form1
             picWhite7.Location = New Point(F5X, F5Y)
             whiteSevenCurrentLocationX = F5X
             whiteSevenCurrentLocationY = F5Y
+        ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = G6X And whiteEightCurrentLocationY = G6Y And isKing = False Then
+            picWhite8.Location = New Point(F5X, F5Y)
+            whiteEightCurrentLocationX = F5X
+            whiteEightCurrentLocationY = F5Y
         End If
     End Sub
     'Column G
@@ -790,6 +812,10 @@ Public Class Form1
             picWhite7.Location = New Point(G6X, G6Y)
             whiteSevenCurrentLocationX = G6X
             whiteSevenCurrentLocationY = G6Y
+        ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = H7X And whiteEightCurrentLocationY = H7Y Then
+            picWhite8.Location = New Point(G6X, G6Y)
+            whiteEightCurrentLocationX = G6X
+            whiteEightCurrentLocationY = G6Y
         End If
     End Sub
     'Column H
@@ -878,5 +904,9 @@ Public Class Form1
         picWhite7.Location = New Point(whiteSevenStartingLocationX, whiteSevenStartingLocationY)
         whiteSevenCurrentLocationX = whiteSevenStartingLocationX
         whiteSevenCurrentLocationY = whiteSevenStartingLocationY
+
+        picWhite8.Location = New Point(whiteEightStartingLocationX, whiteEightStartingLocationY)
+        whiteEightCurrentLocationX = whiteEightStartingLocationX
+        whiteEightCurrentLocationY = whiteEightStartingLocationY
     End Sub
 End Class
