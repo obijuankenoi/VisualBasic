@@ -2,7 +2,7 @@
 ''' Name: Matthew Carmona
 ''' Date: 2/9/18
 ''' Project: Checkers
-''' Updated: 2/17/19
+''' Updated: 2/19/19
 ''' </summary>
 Public Class Checkers
     Dim playerPiece As String
@@ -24,17 +24,23 @@ Public Class Checkers
     Dim whiteEightCurrentLocationX = whiteEightStartingLocationX, whiteEightCurrentLocationY = whiteEightStartingLocationY
     Dim whiteNineStartingLocationX = 12, whiteNineStartingLocationY = 555
     Dim whiteNineCurrentLocationX = whiteNineStartingLocationX, whiteNineCurrentLocationY = whiteNineStartingLocationY
+    Dim whiteTenStartingLocationX = 172, whiteTenStartingLocationY = 555
+    Dim whiteTenCurrentLocationX = whiteTenStartingLocationX, whiteTenCurrentLocationY = whiteTenStartingLocationY
+    Dim whiteElevenStartingLocationX = 332, whiteElevenStartingLocationY = 555
+    Dim whiteElevenCurrentLocationX = whiteElevenStartingLocationX, whiteElevenCurrentLocationY = whiteElevenStartingLocationY
+    Dim whiteTwelveStartingLocationX = 492, whiteTwelveStartingLocationY = 555
+    Dim whiteTwelveCurrentLocationX = whiteTwelveStartingLocationX, whiteTwelveCurrentLocationY = whiteTwelveStartingLocationY
     Dim isKing = False
 
     Dim A2X = 12, A2Y = 87, A4X = 12, A4Y = 243, A6X = 12, A6Y = 399, A8X = 12, A8Y = 555
 
     Dim B1X = 92, B1Y = 9, B3X = 92, B3Y = 165, B5X = 92, B5Y = 321, B7X = 92, B7Y = 477
 
-    Dim C2X = 172, C2Y = 87, C4X = 172, C4Y = 243, C6X = 172, C6Y = 399
+    Dim C2X = 172, C2Y = 87, C4X = 172, C4Y = 243, C6X = 172, C6Y = 399, C8X = 172, C8Y = 555
 
     Dim D1X = 252, D1Y = 9, D3X = 252, D3Y = 165, D5X = 252, D5Y = 321, D7X = 252, D7Y = 477
 
-    Dim E2X = 332, E2Y = 87, E4X = 332, E4Y = 243, E6X = 332, E6Y = 399
+    Dim E2X = 332, E2Y = 87, E4X = 332, E4Y = 243, E6X = 332, E6Y = 399, E8X = 332, E8Y = 555
 
     Dim F1X = 412, F1Y = 9, F3X = 412, F3Y = 165, F5X = 412, F5Y = 321, F7X = 412, F7Y = 477
 
@@ -69,488 +75,693 @@ Public Class Checkers
     Private Sub picWhite9_Click(sender As Object, e As EventArgs) Handles picWhite9.Click
         playerPiece = "W9"
     End Sub
+    Private Sub picWhite10_Click(sender As Object, e As EventArgs) Handles picWhite10.Click
+        playerPiece = "W10"
+    End Sub
+    Private Sub picWhite11_Click(sender As Object, e As EventArgs) Handles picWhite11.Click
+        playerPiece = "W11"
+    End Sub
+    Private Sub picWhite12_Click(sender As Object, e As EventArgs) Handles picWhite12.Click
+        playerPiece = "W12"
+    End Sub
     'Column A
     Private Sub btnA2_Click(sender As Object, e As EventArgs) Handles btnA2.Click
-        If playerPiece = "W1" And whiteOneCurrentLocationX = B3X And whiteOneCurrentLocationY = B3Y And isKing = False Then
-            whiteOneMove(A2X, A2Y)
-        ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = B3X And whiteTwoCurrentLocationY = B3Y And isKing = False Then
-            whiteTwoMove(A2X, A2Y)
-        ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = B3X And whiteThreeCurrentLocationY = B3Y And isKing = False Then
-            whiteThreeMove(A2X, A2Y)
-        ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = B3X And whiteFiveCurrentLocationY = B3Y And isKing = False Then
-            whiteFiveMove(A2X, A2Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = B3X And whiteSixCurrentLocationY = B3Y And isKing = False Then
-            whiteSixMove(A2X, A2Y)
-        ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = B3X And whiteSevenCurrentLocationY = B3Y And isKing = False Then
-            whiteSevenMove(A2X, A2Y)
-        ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = B3X And whiteNineCurrentLocationY = B3Y And isKing = False Then
-            whiteNineMove(A2X, A2Y)
+        If isKing = False Then
+            If playerPiece = "W1" And whiteOneCurrentLocationX = B3X And whiteOneCurrentLocationY = B3Y Then
+                whiteOneMove(A2X, A2Y)
+            ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = B3X And whiteTwoCurrentLocationY = B3Y Then
+                whiteTwoMove(A2X, A2Y)
+            ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = B3X And whiteThreeCurrentLocationY = B3Y Then
+                whiteThreeMove(A2X, A2Y)
+            ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = B3X And whiteFiveCurrentLocationY = B3Y Then
+                whiteFiveMove(A2X, A2Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = B3X And whiteSixCurrentLocationY = B3Y Then
+                whiteSixMove(A2X, A2Y)
+            ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = B3X And whiteSevenCurrentLocationY = B3Y Then
+                whiteSevenMove(A2X, A2Y)
+            ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = B3X And whiteNineCurrentLocationY = B3Y Then
+                whiteNineMove(A2X, A2Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = B3X And whiteTenCurrentLocationY = B3Y Then
+                whiteTenMove(A2X, A2Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = B3X And whiteElevenCurrentLocationY = B3Y Then
+                whiteElevenMove(A2X, A2Y)
+            End If
         End If
     End Sub
     Private Sub btnA4_Click(sender As Object, e As EventArgs) Handles btnA4.Click
-        If playerPiece = "W1" And whiteOneCurrentLocationX = B5X And whiteOneCurrentLocationY = B5Y And isKing = False Then
-            whiteOneMove(A4X, A4Y)
-        ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = B5X And whiteTwoCurrentLocationY = B5Y And isKing = False Then
-            whiteTwoMove(A4X, A4Y)
-        ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = B5X And whiteFiveCurrentLocationY = B5Y And isKing = False Then
-            whiteFiveMove(A4X, A4Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = B5X And whiteSixCurrentLocationY = B5Y And isKing = False Then
-            whiteSixMove(A4X, A4Y)
-        ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = B5X And whiteNineCurrentLocationY = B5Y And isKing = False Then
-            whiteNineMove(A4X, A4Y)
+        If isKing = False Then
+            If playerPiece = "W1" And whiteOneCurrentLocationX = B5X And whiteOneCurrentLocationY = B5Y Then
+                whiteOneMove(A4X, A4Y)
+            ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = B5X And whiteTwoCurrentLocationY = B5Y Then
+                whiteTwoMove(A4X, A4Y)
+            ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = B5X And whiteFiveCurrentLocationY = B5Y Then
+                whiteFiveMove(A4X, A4Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = B5X And whiteSixCurrentLocationY = B5Y Then
+                whiteSixMove(A4X, A4Y)
+            ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = B5X And whiteNineCurrentLocationY = B5Y Then
+                whiteNineMove(A4X, A4Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = B5X And whiteTenCurrentLocationY = B5Y Then
+                whiteTenMove(A4X, A4Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = B5X And whiteElevenCurrentLocationY = B5Y Then
+                whiteElevenMove(A4X, A4Y)
+            End If
         End If
     End Sub
     Private Sub btnA6_Click(sender As Object, e As EventArgs) Handles btnA6.Click
-        If playerPiece = "W1" And whiteOneCurrentLocationX = B7X And whiteOneCurrentLocationY = B7Y And isKing = False Then
+        If playerPiece = "W1" And whiteOneCurrentLocationX = B7X And whiteOneCurrentLocationY = B7Y Then
             whiteOneMove(A6X, A6Y)
+        ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = B7X And whiteNineCurrentLocationY = B7Y Then
+            whiteNineMove(A6X, A6Y)
+        ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = B7X And whiteTenCurrentLocationY = B7Y Then
+            whiteTenMove(A6X, A6Y)
         End If
     End Sub
     'Column B
     Private Sub btnB1_Click(sender As Object, e As EventArgs) Handles btnB1.Click
-        If playerPiece = "W1" And whiteOneCurrentLocationX = A2X And whiteOneCurrentLocationY = A2Y And isKing = False Then
-            whiteOneMove(B1X, B1Y)
-        ElseIf playerPiece = "W1" And whiteOneCurrentLocationX = C2X And whiteOneCurrentLocationY = C2Y And isKing = False Then
-            whiteOneMove(B1X, B1Y)
-        ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = A2X And whiteTwoCurrentLocationY = A2Y And isKing = False Then
-            whiteTwoMove(B1X, B1Y)
-        ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = C2X And whiteTwoCurrentLocationY = C2Y And isKing = False Then
-            whiteTwoMove(B1X, B1Y)
-        ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = A2X And whiteThreeCurrentLocationY = A2Y And isKing = False Then
-            whiteThreeMove(B1X, B1Y)
-        ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = C2X And whiteThreeCurrentLocationY = C2Y And isKing = False Then
-            whiteThreeMove(B1X, B1Y)
-        ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = C2X And whiteFourCurrentLocationY = C2Y And isKing = False Then
-            whiteFourMove(B1X, B1Y)
-        ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = A2X And whiteFiveCurrentLocationY = A2Y And isKing = False Then
-            whiteFiveMove(B1X, B1Y)
-        ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = C2X And whiteFiveCurrentLocationY = C2Y And isKing = False Then
-            whiteFiveMove(B1X, B1Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = A2X And whiteSixCurrentLocationY = A2Y And isKing = False Then
-            whiteSixMove(B1X, B1Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = C2X And whiteSixCurrentLocationY = C2Y And isKing = False Then
-            whiteSixMove(B1X, B1Y)
-        ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = A2X And whiteSevenCurrentLocationY = A2Y And isKing = False Then
-            whiteSevenMove(B1X, B1Y)
-        ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = C2X And whiteSevenCurrentLocationY = C2Y And isKing = False Then
-            whiteSevenMove(B1X, B1Y)
-        ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = C2X And whiteEightCurrentLocationY = C2Y And isKing = False Then
-            whiteEightMove(B1X, B1Y)
-        ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = C2X And whiteNineCurrentLocationY = C2Y And isKing = False Then
-            whiteNineMove(B1X, B1Y)
-        ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = A2X And whiteNineCurrentLocationY = A2Y And isKing = False Then
-            whiteNineMove(B1X, B1Y)
+        If isKing = False Then
+            If playerPiece = "W1" And whiteOneCurrentLocationX = A2X And whiteOneCurrentLocationY = A2Y Then
+                whiteOneMove(B1X, B1Y)
+            ElseIf playerPiece = "W1" And whiteOneCurrentLocationX = C2X And whiteOneCurrentLocationY = C2Y Then
+                whiteOneMove(B1X, B1Y)
+            ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = A2X And whiteTwoCurrentLocationY = A2Y Then
+                whiteTwoMove(B1X, B1Y)
+            ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = C2X And whiteTwoCurrentLocationY = C2Y Then
+                whiteTwoMove(B1X, B1Y)
+            ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = A2X And whiteThreeCurrentLocationY = A2Y Then
+                whiteThreeMove(B1X, B1Y)
+            ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = C2X And whiteThreeCurrentLocationY = C2Y Then
+                whiteThreeMove(B1X, B1Y)
+            ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = C2X And whiteFourCurrentLocationY = C2Y Then
+                whiteFourMove(B1X, B1Y)
+            ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = A2X And whiteFiveCurrentLocationY = A2Y Then
+                whiteFiveMove(B1X, B1Y)
+            ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = C2X And whiteFiveCurrentLocationY = C2Y Then
+                whiteFiveMove(B1X, B1Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = A2X And whiteSixCurrentLocationY = A2Y Then
+                whiteSixMove(B1X, B1Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = C2X And whiteSixCurrentLocationY = C2Y Then
+                whiteSixMove(B1X, B1Y)
+            ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = A2X And whiteSevenCurrentLocationY = A2Y Then
+                whiteSevenMove(B1X, B1Y)
+            ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = C2X And whiteSevenCurrentLocationY = C2Y Then
+                whiteSevenMove(B1X, B1Y)
+            ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = C2X And whiteEightCurrentLocationY = C2Y Then
+                whiteEightMove(B1X, B1Y)
+            ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = C2X And whiteNineCurrentLocationY = C2Y Then
+                whiteNineMove(B1X, B1Y)
+            ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = A2X And whiteNineCurrentLocationY = A2Y Then
+                whiteNineMove(B1X, B1Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = C2X And whiteTenCurrentLocationY = C2Y Then
+                whiteTenMove(B1X, B1Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = A2X And whiteTenCurrentLocationY = A2Y Then
+                whiteTenMove(B1X, B1Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = C2X And whiteElevenCurrentLocationY = C2Y Then
+                whiteElevenMove(B1X, B1Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = A2X And whiteElevenCurrentLocationY = A2Y Then
+                whiteElevenMove(B1X, B1Y)
+            End If
         End If
     End Sub
     Private Sub btnB3_Click(sender As Object, e As EventArgs) Handles btnB3.Click
-        If playerPiece = "W1" And whiteOneCurrentLocationX = A4X And whiteOneCurrentLocationY = A4Y And isKing = False Then
-            whiteOneMove(B3X, B3Y)
-        ElseIf playerPiece = "W1" And whiteOneCurrentLocationX = C4X And whiteOneCurrentLocationY = C4Y And isKing = False Then
-            whiteOneMove(B3X, B3Y)
-        ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = A4X And whiteTwoCurrentLocationY = A4Y And isKing = False Then
-            whiteTwoMove(B3X, B3Y)
-        ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = C4X And whiteTwoCurrentLocationY = C4Y And isKing = False Then
-            whiteTwoMove(B3X, B3Y)
-        ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = C4X And whiteThreeCurrentLocationY = C4Y And isKing = False Then
-            whiteThreeMove(B3X, B3Y)
-        ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = A4X And whiteFiveCurrentLocationY = A4Y And isKing = False Then
-            whiteFiveMove(B3X, B3Y)
-        ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = C4X And whiteFiveCurrentLocationY = C4Y And isKing = False Then
-            whiteFiveMove(B3X, B3Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = A4X And whiteSixCurrentLocationY = A4Y And isKing = False Then
-            whiteSixMove(B3X, B3Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = C4X And whiteSixCurrentLocationY = C4Y And isKing = False Then
-            whiteSixMove(B3X, B3Y)
-        ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = C4X And whiteSevenCurrentLocationY = C4Y And isKing = False Then
-            whiteSevenMove(B3X, B3Y)
-        ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = C4X And whiteNineCurrentLocationY = C4Y And isKing = False Then
-            whiteNineMove(B3X, B3Y)
-        ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = A4X And whiteNineCurrentLocationY = A4Y And isKing = False Then
-            whiteNineMove(B3X, B3Y)
+        If isKing = False Then
+            If playerPiece = "W1" And whiteOneCurrentLocationX = A4X And whiteOneCurrentLocationY = A4Y Then
+                whiteOneMove(B3X, B3Y)
+            ElseIf playerPiece = "W1" And whiteOneCurrentLocationX = C4X And whiteOneCurrentLocationY = C4Y Then
+                whiteOneMove(B3X, B3Y)
+            ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = A4X And whiteTwoCurrentLocationY = A4Y Then
+                whiteTwoMove(B3X, B3Y)
+            ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = C4X And whiteTwoCurrentLocationY = C4Y Then
+                whiteTwoMove(B3X, B3Y)
+            ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = C4X And whiteThreeCurrentLocationY = C4Y Then
+                whiteThreeMove(B3X, B3Y)
+            ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = A4X And whiteFiveCurrentLocationY = A4Y Then
+                whiteFiveMove(B3X, B3Y)
+            ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = C4X And whiteFiveCurrentLocationY = C4Y Then
+                whiteFiveMove(B3X, B3Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = A4X And whiteSixCurrentLocationY = A4Y Then
+                whiteSixMove(B3X, B3Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = C4X And whiteSixCurrentLocationY = C4Y Then
+                whiteSixMove(B3X, B3Y)
+            ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = C4X And whiteSevenCurrentLocationY = C4Y Then
+                whiteSevenMove(B3X, B3Y)
+            ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = C4X And whiteNineCurrentLocationY = C4Y Then
+                whiteNineMove(B3X, B3Y)
+            ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = A4X And whiteNineCurrentLocationY = A4Y Then
+                whiteNineMove(B3X, B3Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = C4X And whiteTenCurrentLocationY = C4Y Then
+                whiteTenMove(B3X, B3Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = A4X And whiteTenCurrentLocationY = A4Y Then
+                whiteTenMove(B3X, B3Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = C4X And whiteElevenCurrentLocationY = C4Y Then
+                whiteElevenMove(B3X, B3Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = A4X And whiteElevenCurrentLocationY = A4Y Then
+                whiteElevenMove(B3X, B3Y)
+            End If
         End If
     End Sub
     Private Sub btnB5_Click(sender As Object, e As EventArgs) Handles btnB5.Click
-        If playerPiece = "W1" And whiteOneCurrentLocationX = A6X And whiteOneCurrentLocationY = A6Y And isKing = False Then
-            whiteOneMove(B5X, B5Y)
-        ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = C6X And whiteTwoCurrentLocationY = C6Y And isKing = False Then
-            whiteTwoMove(B5X, B5Y)
-        ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = C6X And whiteFiveCurrentLocationY = C6Y And isKing = False Then
-            whiteFiveMove(B5X, B5Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = C6X And whiteSixCurrentLocationY = C6Y And isKing = False Then
-            whiteSixMove(B5X, B5Y)
-        ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = C6X And whiteNineCurrentLocationY = C6Y And isKing = False Then
-            whiteNineMove(B5X, B5Y)
+        If isKing = False Then
+            If playerPiece = "W1" And whiteOneCurrentLocationX = A6X And whiteOneCurrentLocationY = A6Y Then
+                whiteOneMove(B5X, B5Y)
+            ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = C6X And whiteTwoCurrentLocationY = C6Y Then
+                whiteTwoMove(B5X, B5Y)
+            ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = C6X And whiteFiveCurrentLocationY = C6Y Then
+                whiteFiveMove(B5X, B5Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = C6X And whiteSixCurrentLocationY = C6Y Then
+                whiteSixMove(B5X, B5Y)
+            ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = C6X And whiteNineCurrentLocationY = C6Y Then
+                whiteNineMove(B5X, B5Y)
+            ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = A6X And whiteNineCurrentLocationY = A6Y Then
+                whiteNineMove(B5X, B5Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = C6X And whiteTenCurrentLocationY = C6Y Then
+                whiteTenMove(B5X, B5Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = A6X And whiteTenCurrentLocationY = A6Y Then
+                whiteTenMove(B5X, B5Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = C6X And whiteElevenCurrentLocationY = C6Y Then
+                whiteElevenMove(B5X, B5Y)
+            End If
         End If
     End Sub
     Private Sub btnB7_Click(sender As Object, e As EventArgs) Handles btnB7.Click
-        If playerPiece = "W9" And whiteNineCurrentLocationX = A8X And whiteNineCurrentLocationY = A8Y And isKing = False Then
+        If playerPiece = "W9" And whiteNineCurrentLocationX = A8X And whiteNineCurrentLocationY = A8Y Then
             whiteNineMove(B7X, B7Y)
+        ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = C8X And whiteTenCurrentLocationY = C8Y Then
+            whiteTenMove(B7X, B7Y)
         End If
     End Sub
     'Column C
     Private Sub btnC2_Click(sender As Object, e As EventArgs) Handles btnC2.Click
-        If playerPiece = "W1" And whiteOneCurrentLocationX = B3X And whiteOneCurrentLocationY = B3Y And isKing = False Then
-            whiteOneMove(C2X, C2Y)
-        ElseIf playerPiece = "W1" And whiteOneCurrentLocationX = D3X And whiteOneCurrentLocationY = D3Y And isKing = False Then
-            whiteOneMove(C2X, C2Y)
-        ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = B3X And whiteTwoCurrentLocationY = B3Y And isKing = False Then
-            whiteTwoMove(C2X, C2Y)
-        ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = D3X And whiteTwoCurrentLocationY = D3Y And isKing = False Then
-            whiteTwoMove(C2X, C2Y)
-        ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = B3X And whiteThreeCurrentLocationY = B3Y And isKing = False Then
-            whiteThreeMove(C2X, C2Y)
-        ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = D3X And whiteThreeCurrentLocationY = D3Y And isKing = False Then
-            whiteThreeMove(C2X, C2Y)
-        ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = D3X And whiteFourCurrentLocationY = D3Y And isKing = False Then
-            whiteFourMove(C2X, C2Y)
-        ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = B3X And whiteFiveCurrentLocationY = B3Y And isKing = False Then
-            whiteFiveMove(C2X, C2Y)
-        ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = D3X And whiteFiveCurrentLocationY = D3Y And isKing = False Then
-            whiteFiveMove(C2X, C2Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = B3X And whiteSixCurrentLocationY = B3Y And isKing = False Then
-            whiteSixMove(C2X, C2Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = D3X And whiteSixCurrentLocationY = D3Y And isKing = False Then
-            whiteSixMove(C2X, C2Y)
-        ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = B3X And whiteSevenCurrentLocationY = B3Y And isKing = False Then
-            whiteSevenMove(C2X, C2Y)
-        ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = D3X And whiteSevenCurrentLocationY = D3Y And isKing = False Then
-            whiteSevenMove(C2X, C2Y)
-        ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = D3X And whiteEightCurrentLocationY = D3Y And isKing = False Then
-            whiteEightMove(C2X, C2Y)
-        ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = D3X And whiteNineCurrentLocationY = D3Y And isKing = False Then
-            whiteNineMove(C2X, C2Y)
-        ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = B3X And whiteNineCurrentLocationY = B3Y And isKing = False Then
-            whiteNineMove(C2X, C2Y)
+        If isKing = False Then
+            If playerPiece = "W1" And whiteOneCurrentLocationX = B3X And whiteOneCurrentLocationY = B3Y Then
+                whiteOneMove(C2X, C2Y)
+            ElseIf playerPiece = "W1" And whiteOneCurrentLocationX = D3X And whiteOneCurrentLocationY = D3Y Then
+                whiteOneMove(C2X, C2Y)
+            ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = B3X And whiteTwoCurrentLocationY = B3Y Then
+                whiteTwoMove(C2X, C2Y)
+            ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = D3X And whiteTwoCurrentLocationY = D3Y Then
+                whiteTwoMove(C2X, C2Y)
+            ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = B3X And whiteThreeCurrentLocationY = B3Y Then
+                whiteThreeMove(C2X, C2Y)
+            ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = D3X And whiteThreeCurrentLocationY = D3Y Then
+                whiteThreeMove(C2X, C2Y)
+            ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = D3X And whiteFourCurrentLocationY = D3Y Then
+                whiteFourMove(C2X, C2Y)
+            ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = B3X And whiteFiveCurrentLocationY = B3Y Then
+                whiteFiveMove(C2X, C2Y)
+            ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = D3X And whiteFiveCurrentLocationY = D3Y Then
+                whiteFiveMove(C2X, C2Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = B3X And whiteSixCurrentLocationY = B3Y Then
+                whiteSixMove(C2X, C2Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = D3X And whiteSixCurrentLocationY = D3Y Then
+                whiteSixMove(C2X, C2Y)
+            ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = B3X And whiteSevenCurrentLocationY = B3Y Then
+                whiteSevenMove(C2X, C2Y)
+            ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = D3X And whiteSevenCurrentLocationY = D3Y Then
+                whiteSevenMove(C2X, C2Y)
+            ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = D3X And whiteEightCurrentLocationY = D3Y Then
+                whiteEightMove(C2X, C2Y)
+            ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = D3X And whiteNineCurrentLocationY = D3Y Then
+                whiteNineMove(C2X, C2Y)
+            ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = B3X And whiteNineCurrentLocationY = B3Y Then
+                whiteNineMove(C2X, C2Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = D3X And whiteTenCurrentLocationY = D3Y Then
+                whiteTenMove(C2X, C2Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = B3X And whiteTenCurrentLocationY = B3Y Then
+                whiteTenMove(C2X, C2Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = D3X And whiteElevenCurrentLocationY = D3Y Then
+                whiteElevenMove(C2X, C2Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = B3X And whiteElevenCurrentLocationY = B3Y Then
+                whiteElevenMove(C2X, C2Y)
+            End If
         End If
     End Sub
     Private Sub btnC4_Click(sender As Object, e As EventArgs) Handles btnC4.Click
-        If playerPiece = "W1" And whiteOneCurrentLocationX = B5X And whiteOneCurrentLocationY = B5Y And isKing = False Then
-            whiteOneMove(C4X, C4Y)
-        ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = B5X And whiteTwoCurrentLocationY = B5Y And isKing = False Then
-            whiteTwoMove(C4X, C4Y)
-        ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = D5X And whiteTwoCurrentLocationY = D5Y And isKing = False Then
-            whiteTwoMove(C4X, C4Y)
-        ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = D5X And whiteThreeCurrentLocationY = D5Y And isKing = False Then
-            whiteThreeMove(C4X, C4Y)
-        ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = B5X And whiteFiveCurrentLocationY = B5Y And isKing = False Then
-            whiteFiveMove(C4X, C4Y)
-        ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = D5X And whiteFiveCurrentLocationY = D5Y And isKing = False Then
-            whiteFiveMove(C4X, C4Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = B5X And whiteSixCurrentLocationY = B5Y And isKing = False Then
-            whiteSixMove(C4X, C4Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = D5X And whiteSixCurrentLocationY = D5Y And isKing = False Then
-            whiteSixMove(C4X, C4Y)
-        ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = D5X And whiteSevenCurrentLocationY = D5Y And isKing = False Then
-            whiteSevenMove(C4X, C4Y)
-        ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = D5X And whiteNineCurrentLocationY = D5Y And isKing = False Then
-            whiteNineMove(C4X, C4Y)
-        ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = B5X And whiteNineCurrentLocationY = B5Y And isKing = False Then
-            whiteNineMove(C4X, C4Y)
+        If isKing = False Then
+            If playerPiece = "W1" And whiteOneCurrentLocationX = B5X And whiteOneCurrentLocationY = B5Y Then
+                whiteOneMove(C4X, C4Y)
+            ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = B5X And whiteTwoCurrentLocationY = B5Y Then
+                whiteTwoMove(C4X, C4Y)
+            ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = D5X And whiteTwoCurrentLocationY = D5Y Then
+                whiteTwoMove(C4X, C4Y)
+            ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = D5X And whiteThreeCurrentLocationY = D5Y Then
+                whiteThreeMove(C4X, C4Y)
+            ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = B5X And whiteFiveCurrentLocationY = B5Y Then
+                whiteFiveMove(C4X, C4Y)
+            ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = D5X And whiteFiveCurrentLocationY = D5Y Then
+                whiteFiveMove(C4X, C4Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = B5X And whiteSixCurrentLocationY = B5Y Then
+                whiteSixMove(C4X, C4Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = D5X And whiteSixCurrentLocationY = D5Y Then
+                whiteSixMove(C4X, C4Y)
+            ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = D5X And whiteSevenCurrentLocationY = D5Y Then
+                whiteSevenMove(C4X, C4Y)
+            ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = D5X And whiteNineCurrentLocationY = D5Y Then
+                whiteNineMove(C4X, C4Y)
+            ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = B5X And whiteNineCurrentLocationY = B5Y Then
+                whiteNineMove(C4X, C4Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = D5X And whiteTenCurrentLocationY = D5Y Then
+                whiteTenMove(C4X, C4Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = B5X And whiteTenCurrentLocationY = B5Y Then
+                whiteTenMove(C4X, C4Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = D5X And whiteElevenCurrentLocationY = D5Y Then
+                whiteElevenMove(C4X, C4Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = B5X And whiteElevenCurrentLocationY = B5Y Then
+                whiteElevenMove(C4X, C4Y)
+            End If
         End If
     End Sub
     Private Sub btnC6_Click(sender As Object, e As EventArgs) Handles btnC6.Click
-        If playerPiece = "W5" And whiteFiveCurrentLocationX = B7X And whiteFiveCurrentLocationY = B7Y And isKing = False Then
-            whiteFiveMove(C6X, C6Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = D7X And whiteSixCurrentLocationY = D7Y And isKing = False Then
-            whiteSixMove(C6X, C6Y)
-        ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = B7X And whiteNineCurrentLocationY = B7Y And isKing = False Then
-            whiteNineMove(C6X, C6Y)
+        If isKing = False Then
+            If playerPiece = "W5" And whiteFiveCurrentLocationX = B7X And whiteFiveCurrentLocationY = B7Y Then
+                whiteFiveMove(C6X, C6Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = D7X And whiteSixCurrentLocationY = D7Y Then
+                whiteSixMove(C6X, C6Y)
+            ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = B7X And whiteNineCurrentLocationY = B7Y Then
+                whiteNineMove(C6X, C6Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = D7X And whiteTenCurrentLocationY = D7Y Then
+                whiteTenMove(C6X, C6Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = B7X And whiteTenCurrentLocationY = B7Y Then
+                whiteTenMove(C6X, C6Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = D7X And whiteElevenCurrentLocationY = D7Y Then
+                whiteElevenMove(C6X, C6Y)
+            End If
         End If
     End Sub
     'Column D
     Private Sub btnD1_Click(sender As Object, e As EventArgs) Handles btnD1.Click
-        If playerPiece = "W1" And whiteOneCurrentLocationX = C2X And whiteOneCurrentLocationY = C2Y And isKing = False Then
-            whiteOneMove(D1X, D1Y)
-        ElseIf playerPiece = "W1" And whiteOneCurrentLocationX = E2X And whiteOneCurrentLocationY = E2Y And isKing = False Then
-            whiteOneMove(D1X, D1Y)
-        ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = C2X And whiteTwoCurrentLocationY = C2Y And isKing = False Then
-            whiteTwoMove(D1X, D1Y)
-        ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = E2X And whiteTwoCurrentLocationY = E2Y And isKing = False Then
-            whiteTwoMove(D1X, D1Y)
-        ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = C2X And whiteThreeCurrentLocationY = C2Y And isKing = False Then
-            whiteThreeMove(D1X, D1Y)
-        ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = E2X And whiteThreeCurrentLocationY = E2Y And isKing = False Then
-            whiteThreeMove(D1X, D1Y)
-        ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = C2X And whiteFourCurrentLocationY = C2Y And isKing = False Then
-            whiteFourMove(D1X, D1Y)
-        ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = E2X And whiteFourCurrentLocationY = E2Y And isKing = False Then
-            whiteFourMove(D1X, D1Y)
-        ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = C2X And whiteFiveCurrentLocationY = C2Y And isKing = False Then
-            whiteFiveMove(D1X, D1Y)
-        ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = E2X And whiteFiveCurrentLocationY = E2Y And isKing = False Then
-            whiteFiveMove(D1X, D1Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = C2X And whiteSixCurrentLocationY = C2Y And isKing = False Then
-            whiteSixMove(D1X, D1Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = E2X And whiteSixCurrentLocationY = E2Y And isKing = False Then
-            whiteSixMove(D1X, D1Y)
-        ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = C2X And whiteSevenCurrentLocationY = C2Y And isKing = False Then
-            whiteSevenMove(D1X, D1Y)
-        ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = C2X And whiteEightCurrentLocationY = C2Y And isKing = False Then
-            whiteEightMove(D1X, D1Y)
-        ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = E2X And whiteEightCurrentLocationY = E2Y And isKing = False Then
-            whiteEightMove(D1X, D1Y)
-        ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = E2X And whiteNineCurrentLocationY = E2Y And isKing = False Then
-            whiteNineMove(D1X, D1Y)
-        ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = C2X And whiteNineCurrentLocationY = C2Y And isKing = False Then
-            whiteNineMove(D1X, D1Y)
+        If isKing = False Then
+            If playerPiece = "W1" And whiteOneCurrentLocationX = C2X And whiteOneCurrentLocationY = C2Y Then
+                whiteOneMove(D1X, D1Y)
+            ElseIf playerPiece = "W1" And whiteOneCurrentLocationX = E2X And whiteOneCurrentLocationY = E2Y Then
+                whiteOneMove(D1X, D1Y)
+            ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = C2X And whiteTwoCurrentLocationY = C2Y Then
+                whiteTwoMove(D1X, D1Y)
+            ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = E2X And whiteTwoCurrentLocationY = E2Y Then
+                whiteTwoMove(D1X, D1Y)
+            ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = C2X And whiteThreeCurrentLocationY = C2Y Then
+                whiteThreeMove(D1X, D1Y)
+            ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = E2X And whiteThreeCurrentLocationY = E2Y Then
+                whiteThreeMove(D1X, D1Y)
+            ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = C2X And whiteFourCurrentLocationY = C2Y Then
+                whiteFourMove(D1X, D1Y)
+            ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = E2X And whiteFourCurrentLocationY = E2Y Then
+                whiteFourMove(D1X, D1Y)
+            ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = C2X And whiteFiveCurrentLocationY = C2Y Then
+                whiteFiveMove(D1X, D1Y)
+            ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = E2X And whiteFiveCurrentLocationY = E2Y Then
+                whiteFiveMove(D1X, D1Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = C2X And whiteSixCurrentLocationY = C2Y Then
+                whiteSixMove(D1X, D1Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = E2X And whiteSixCurrentLocationY = E2Y Then
+                whiteSixMove(D1X, D1Y)
+            ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = C2X And whiteSevenCurrentLocationY = C2Y Then
+                whiteSevenMove(D1X, D1Y)
+            ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = C2X And whiteEightCurrentLocationY = C2Y Then
+                whiteEightMove(D1X, D1Y)
+            ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = E2X And whiteEightCurrentLocationY = E2Y Then
+                whiteEightMove(D1X, D1Y)
+            ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = E2X And whiteNineCurrentLocationY = E2Y Then
+                whiteNineMove(D1X, D1Y)
+            ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = C2X And whiteNineCurrentLocationY = C2Y Then
+                whiteNineMove(D1X, D1Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = E2X And whiteTenCurrentLocationY = E2Y Then
+                whiteTenMove(D1X, D1Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = C2X And whiteTenCurrentLocationY = C2Y Then
+                whiteTenMove(D1X, D1Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = E2X And whiteElevenCurrentLocationY = E2Y Then
+                whiteElevenMove(D1X, D1Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = C2X And whiteElevenCurrentLocationY = C2Y Then
+                whiteElevenMove(D1X, D1Y)
+            End If
         End If
     End Sub
     Private Sub btnD3_Click(sender As Object, e As EventArgs) Handles btnD3.Click
-        If playerPiece = "W1" And whiteOneCurrentLocationX = C4X And whiteOneCurrentLocationY = C4Y And isKing = False Then
-            whiteOneMove(D3X, D3Y)
-        ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = C4X And whiteTwoCurrentLocationY = C4Y And isKing = False Then
-            whiteTwoMove(D3X, D3Y)
-        ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = E4X And whiteTwoCurrentLocationY = E4Y And isKing = False Then
-            whiteTwoMove(D3X, D3Y)
-        ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = C4X And whiteThreeCurrentLocationY = C4Y And isKing = False Then
-            whiteThreeMove(D3X, D3Y)
-        ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = E4X And whiteThreeCurrentLocationY = E4Y And isKing = False Then
-            whiteThreeMove(D3X, D3Y)
-        ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = E4X And whiteFourCurrentLocationY = E4Y And isKing = False Then
-            whiteFourMove(D3X, D3Y)
-        ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = C4X And whiteFiveCurrentLocationY = C4Y And isKing = False Then
-            whiteFiveMove(D3X, D3Y)
-        ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = E4X And whiteFiveCurrentLocationY = E4Y And isKing = False Then
-            whiteFiveMove(D3X, D3Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = C4X And whiteSixCurrentLocationY = C4Y And isKing = False Then
-            whiteSixMove(D3X, D3Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = E4X And whiteSixCurrentLocationY = E4Y And isKing = False Then
-            whiteSixMove(D3X, D3Y)
-        ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = C4X And whiteSevenCurrentLocationY = C4Y And isKing = False Then
-            whiteSevenMove(D3X, D3Y)
-        ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = E4X And whiteSevenCurrentLocationY = E4Y And isKing = False Then
-            whiteSevenMove(D3X, D3Y)
-        ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = E4X And whiteEightCurrentLocationY = E4Y And isKing = False Then
-            whiteEightMove(D3X, D3Y)
-        ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = E4X And whiteNineCurrentLocationY = E4Y And isKing = False Then
-            whiteNineMove(D3X, D3Y)
-        ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = C4X And whiteNineCurrentLocationY = C4Y And isKing = False Then
-            whiteNineMove(D3X, D3Y)
+        If isKing = False Then
+            If playerPiece = "W1" And whiteOneCurrentLocationX = C4X And whiteOneCurrentLocationY = C4Y Then
+                whiteOneMove(D3X, D3Y)
+            ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = C4X And whiteTwoCurrentLocationY = C4Y Then
+                whiteTwoMove(D3X, D3Y)
+            ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = E4X And whiteTwoCurrentLocationY = E4Y Then
+                whiteTwoMove(D3X, D3Y)
+            ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = C4X And whiteThreeCurrentLocationY = C4Y Then
+                whiteThreeMove(D3X, D3Y)
+            ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = E4X And whiteThreeCurrentLocationY = E4Y Then
+                whiteThreeMove(D3X, D3Y)
+            ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = E4X And whiteFourCurrentLocationY = E4Y Then
+                whiteFourMove(D3X, D3Y)
+            ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = C4X And whiteFiveCurrentLocationY = C4Y Then
+                whiteFiveMove(D3X, D3Y)
+            ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = E4X And whiteFiveCurrentLocationY = E4Y Then
+                whiteFiveMove(D3X, D3Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = C4X And whiteSixCurrentLocationY = C4Y Then
+                whiteSixMove(D3X, D3Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = E4X And whiteSixCurrentLocationY = E4Y Then
+                whiteSixMove(D3X, D3Y)
+            ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = C4X And whiteSevenCurrentLocationY = C4Y Then
+                whiteSevenMove(D3X, D3Y)
+            ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = E4X And whiteSevenCurrentLocationY = E4Y Then
+                whiteSevenMove(D3X, D3Y)
+            ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = E4X And whiteEightCurrentLocationY = E4Y Then
+                whiteEightMove(D3X, D3Y)
+            ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = E4X And whiteNineCurrentLocationY = E4Y Then
+                whiteNineMove(D3X, D3Y)
+            ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = C4X And whiteNineCurrentLocationY = C4Y Then
+                whiteNineMove(D3X, D3Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = E4X And whiteTenCurrentLocationY = E4Y Then
+                whiteTenMove(D3X, D3Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = C4X And whiteTenCurrentLocationY = C4Y Then
+                whiteTenMove(D3X, D3Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = E4X And whiteElevenCurrentLocationY = E4Y Then
+                whiteElevenMove(D3X, D3Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = C4X And whiteElevenCurrentLocationY = C4Y Then
+                whiteElevenMove(D3X, D3Y)
+            End If
         End If
     End Sub
     Private Sub btnD5_Click(sender As Object, e As EventArgs) Handles btnD5.Click
-        If playerPiece = "W2" And whiteTwoCurrentLocationX = C6X And whiteTwoCurrentLocationY = C6Y And isKing = False Then
-            whiteTwoMove(D5X, D5Y)
-        ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = E6X And whiteThreeCurrentLocationY = E6Y And isKing = False Then
-            whiteThreeMove(D5X, D5Y)
-        ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = C6X And whiteFiveCurrentLocationY = C6Y And isKing = False Then
-            whiteFiveMove(D5X, D5Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = C6X And whiteSixCurrentLocationY = C6Y And isKing = False Then
-            whiteSixMove(D5X, D5Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = E6X And whiteSixCurrentLocationY = E6Y And isKing = False Then
-            whiteSixMove(D5X, D5Y)
-        ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = E6X And whiteSevenCurrentLocationY = E6Y And isKing = False Then
-            whiteSevenMove(D5X, D5Y)
-        ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = C6X And whiteNineCurrentLocationY = C6Y And isKing = False Then
-            whiteNineMove(D5X, D5Y)
+        If isKing = False Then
+            If playerPiece = "W2" And whiteTwoCurrentLocationX = C6X And whiteTwoCurrentLocationY = C6Y Then
+                whiteTwoMove(D5X, D5Y)
+            ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = E6X And whiteThreeCurrentLocationY = E6Y Then
+                whiteThreeMove(D5X, D5Y)
+            ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = C6X And whiteFiveCurrentLocationY = C6Y Then
+                whiteFiveMove(D5X, D5Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = C6X And whiteSixCurrentLocationY = C6Y Then
+                whiteSixMove(D5X, D5Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = E6X And whiteSixCurrentLocationY = E6Y Then
+                whiteSixMove(D5X, D5Y)
+            ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = E6X And whiteSevenCurrentLocationY = E6Y Then
+                whiteSevenMove(D5X, D5Y)
+            ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = C6X And whiteNineCurrentLocationY = C6Y Then
+                whiteNineMove(D5X, D5Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = E6X And whiteTenCurrentLocationY = E6Y Then
+                whiteTenMove(D5X, D5Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = C6X And whiteTenCurrentLocationY = C6Y Then
+                whiteTenMove(D5X, D5Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = E6X And whiteElevenCurrentLocationY = E6Y Then
+                whiteElevenMove(D5X, D5Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = C6X And whiteElevenCurrentLocationY = C6Y Then
+                whiteElevenMove(D5X, D5Y)
+            End If
+        End If
+    End Sub
+    Private Sub btnD7_Click(sender As Object, e As EventArgs) Handles btnD7.Click
+        If isKing = False Then
+            If playerPiece = "W10" And whiteTenCurrentLocationX = C8X And whiteTenCurrentLocationY = C8Y Then
+                whiteTenMove(D7X, D7Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = E8X And whiteElevenCurrentLocationY = E8Y Then
+                whiteElevenMove(D7X, D7Y)
+            End If
         End If
     End Sub
     'Column E
     Private Sub btnE2_Click(sender As Object, e As EventArgs) Handles btnE2.Click
-        If playerPiece = "W1" And whiteOneCurrentLocationX = D3X And whiteOneCurrentLocationY = D3Y And isKing = False Then
-            whiteOneMove(E2X, E2Y)
-        ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = D3X And whiteTwoCurrentLocationY = D3Y And isKing = False Then
-            whiteTwoMove(E2X, E2Y)
-        ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = F3X And whiteTwoCurrentLocationY = F3Y And isKing = False Then
-            whiteTwoMove(E2X, E2Y)
-        ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = D3X And whiteThreeCurrentLocationY = D3Y And isKing = False Then
-            whiteThreeMove(E2X, E2Y)
-        ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = F3X And whiteThreeCurrentLocationY = F3Y And isKing = False Then
-            whiteThreeMove(E2X, E2Y)
-        ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = D3X And whiteFourCurrentLocationY = D3Y And isKing = False Then
-            whiteFourMove(E2X, E2Y)
-        ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = F3X And whiteFourCurrentLocationY = F3Y And isKing = False Then
-            whiteFourMove(E2X, E2Y)
-        ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = D3X And whiteFiveCurrentLocationY = D3Y And isKing = False Then
-            whiteFiveMove(E2X, E2Y)
-        ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = F3X And whiteFiveCurrentLocationY = F3Y And isKing = False Then
-            picWhite5.Location = New Point(E2X, E2Y)
-            whiteFiveMove(E2X, E2Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = D3X And whiteSixCurrentLocationY = D3Y And isKing = False Then
-            picWhite6.Location = New Point(E2X, E2Y)
-            whiteSixMove(E2X, E2Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = F3X And whiteSixCurrentLocationY = F3Y And isKing = False Then
-            whiteSixMove(E2X, E2Y)
-        ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = D3X And whiteSevenCurrentLocationY = D3Y And isKing = False Then
-            whiteSevenMove(E2X, E2Y)
-        ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = F3X And whiteSevenCurrentLocationY = F3Y And isKing = False Then
-            whiteSevenMove(E2X, E2Y)
-        ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = D3X And whiteEightCurrentLocationY = D3Y And isKing = False Then
-            whiteEightMove(E2X, E2Y)
-        ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = F3X And whiteEightCurrentLocationY = F3Y And isKing = False Then
-            whiteEightMove(E2X, E2Y)
-        ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = F3X And whiteNineCurrentLocationY = F3Y And isKing = False Then
-            whiteNineMove(E2X, E2Y)
-        ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = D3X And whiteNineCurrentLocationY = D3Y And isKing = False Then
-            whiteNineMove(E2X, E2Y)
+        If isKing = False Then
+            If playerPiece = "W1" And whiteOneCurrentLocationX = D3X And whiteOneCurrentLocationY = D3Y Then
+                whiteOneMove(E2X, E2Y)
+            ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = D3X And whiteTwoCurrentLocationY = D3Y Then
+                whiteTwoMove(E2X, E2Y)
+            ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = F3X And whiteTwoCurrentLocationY = F3Y Then
+                whiteTwoMove(E2X, E2Y)
+            ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = D3X And whiteThreeCurrentLocationY = D3Y Then
+                whiteThreeMove(E2X, E2Y)
+            ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = F3X And whiteThreeCurrentLocationY = F3Y Then
+                whiteThreeMove(E2X, E2Y)
+            ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = D3X And whiteFourCurrentLocationY = D3Y Then
+                whiteFourMove(E2X, E2Y)
+            ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = F3X And whiteFourCurrentLocationY = F3Y Then
+                whiteFourMove(E2X, E2Y)
+            ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = D3X And whiteFiveCurrentLocationY = D3Y Then
+                whiteFiveMove(E2X, E2Y)
+            ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = F3X And whiteFiveCurrentLocationY = F3Y Then
+                picWhite5.Location = New Point(E2X, E2Y)
+                whiteFiveMove(E2X, E2Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = D3X And whiteSixCurrentLocationY = D3Y Then
+                picWhite6.Location = New Point(E2X, E2Y)
+                whiteSixMove(E2X, E2Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = F3X And whiteSixCurrentLocationY = F3Y Then
+                whiteSixMove(E2X, E2Y)
+            ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = D3X And whiteSevenCurrentLocationY = D3Y Then
+                whiteSevenMove(E2X, E2Y)
+            ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = F3X And whiteSevenCurrentLocationY = F3Y Then
+                whiteSevenMove(E2X, E2Y)
+            ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = D3X And whiteEightCurrentLocationY = D3Y Then
+                whiteEightMove(E2X, E2Y)
+            ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = F3X And whiteEightCurrentLocationY = F3Y Then
+                whiteEightMove(E2X, E2Y)
+            ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = F3X And whiteNineCurrentLocationY = F3Y Then
+                whiteNineMove(E2X, E2Y)
+            ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = D3X And whiteNineCurrentLocationY = D3Y Then
+                whiteNineMove(E2X, E2Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = F3X And whiteTenCurrentLocationY = F3Y Then
+                whiteTenMove(E2X, E2Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = D3X And whiteTenCurrentLocationY = D3Y Then
+                whiteTenMove(E2X, E2Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = F3X And whiteElevenCurrentLocationY = F3Y Then
+                whiteElevenMove(E2X, E2Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = D3X And whiteElevenCurrentLocationY = D3Y Then
+                whiteElevenMove(E2X, E2Y)
+            End If
         End If
     End Sub
     Private Sub btnE4_Click(sender As Object, e As EventArgs) Handles btnE4.Click
-        If playerPiece = "W2" And whiteTwoCurrentLocationX = D5X And whiteTwoCurrentLocationY = D5Y And isKing = False Then
-            whiteTwoMove(E4X, E4Y)
-        ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = D5X And whiteThreeCurrentLocationY = D5Y And isKing = False Then
-            whiteThreeMove(E4X, E4Y)
-        ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = F5X And whiteThreeCurrentLocationY = F5Y And isKing = False Then
-            whiteThreeMove(E4X, E4Y)
-        ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = F5X And whiteFourCurrentLocationY = F5Y And isKing = False Then
-            whiteFourMove(E4X, E4Y)
-        ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = D5X And whiteFiveCurrentLocationY = D5Y And isKing = False Then
-            whiteFiveMove(E4X, E4Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = D5X And whiteSixCurrentLocationY = D5Y And isKing = False Then
-            whiteSixMove(E4X, E4Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = F5X And whiteSixCurrentLocationY = F5Y And isKing = False Then
-            whiteSixMove(E4X, E4Y)
-        ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = D5X And whiteSevenCurrentLocationY = D5Y And isKing = False Then
-            whiteSevenMove(E4X, E4Y)
-        ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = F5X And whiteSevenCurrentLocationY = F5Y And isKing = False Then
-            whiteSevenMove(E4X, E4Y)
-        ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = F5X And whiteEightCurrentLocationY = F5Y And isKing = False Then
-            whiteEightMove(E4X, E4Y)
-        ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = D5X And whiteNineCurrentLocationY = D5Y And isKing = False Then
-            whiteNineMove(E4X, E4Y)
-        ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = F5X And whiteNineCurrentLocationY = F5Y And isKing = False Then
-            whiteNineMove(E4X, E4Y)
+        If isKing = False Then
+            If playerPiece = "W2" And whiteTwoCurrentLocationX = D5X And whiteTwoCurrentLocationY = D5Y Then
+                whiteTwoMove(E4X, E4Y)
+            ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = D5X And whiteThreeCurrentLocationY = D5Y Then
+                whiteThreeMove(E4X, E4Y)
+            ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = F5X And whiteThreeCurrentLocationY = F5Y Then
+                whiteThreeMove(E4X, E4Y)
+            ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = F5X And whiteFourCurrentLocationY = F5Y Then
+                whiteFourMove(E4X, E4Y)
+            ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = D5X And whiteFiveCurrentLocationY = D5Y Then
+                whiteFiveMove(E4X, E4Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = D5X And whiteSixCurrentLocationY = D5Y Then
+                whiteSixMove(E4X, E4Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = F5X And whiteSixCurrentLocationY = F5Y Then
+                whiteSixMove(E4X, E4Y)
+            ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = D5X And whiteSevenCurrentLocationY = D5Y Then
+                whiteSevenMove(E4X, E4Y)
+            ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = F5X And whiteSevenCurrentLocationY = F5Y Then
+                whiteSevenMove(E4X, E4Y)
+            ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = F5X And whiteEightCurrentLocationY = F5Y Then
+                whiteEightMove(E4X, E4Y)
+            ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = D5X And whiteNineCurrentLocationY = D5Y Then
+                whiteNineMove(E4X, E4Y)
+            ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = F5X And whiteNineCurrentLocationY = F5Y Then
+                whiteNineMove(E4X, E4Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = F5X And whiteTenCurrentLocationY = F5Y Then
+                whiteTenMove(E4X, E4Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = D5X And whiteTenCurrentLocationY = D5Y Then
+                whiteTenMove(E4X, E4Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = F5X And whiteElevenCurrentLocationY = F5Y Then
+                whiteElevenMove(E4X, E4Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = D5X And whiteElevenCurrentLocationY = D5Y Then
+                whiteElevenMove(E4X, E4Y)
+            End If
         End If
     End Sub
     Private Sub btnE6_Click(sender As Object, e As EventArgs) Handles btnE6.Click
-        If playerPiece = "W6" And whiteSixCurrentLocationX = D7X And whiteSixCurrentLocationY = D7Y And isKing = False Then
-            whiteSixMove(E6X, E6Y)
-        ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = F7X And whiteSevenCurrentLocationY = F7Y And isKing = False Then
-            whiteSevenMove(E6X, E6Y)
+        If isKing = False Then
+            If playerPiece = "W6" And whiteSixCurrentLocationX = D7X And whiteSixCurrentLocationY = D7Y Then
+                whiteSixMove(E6X, E6Y)
+            ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = F7X And whiteSevenCurrentLocationY = F7Y Then
+                whiteSevenMove(E6X, E6Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = D7X And whiteTenCurrentLocationY = D7Y Then
+                whiteTenMove(E6X, E6Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = F7X And whiteElevenCurrentLocationY = F7Y Then
+                whiteElevenMove(E6X, E6Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = D7X And whiteElevenCurrentLocationY = D7Y Then
+                whiteElevenMove(E6X, E6Y)
+            End If
         End If
     End Sub
     'Column F
     Private Sub btnF1_Click(sender As Object, e As EventArgs) Handles btnF1.Click
-        If playerPiece = "W1" And whiteOneCurrentLocationX = G2X And whiteOneCurrentLocationY = G2Y And isKing = False Then
-            whiteOneMove(F1X, F1Y)
-        ElseIf playerPiece = "W1" And whiteOneCurrentLocationX = E2X And whiteOneCurrentLocationY = E2Y And isKing = False Then
-            whiteOneMove(F1X, F1Y)
-        ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = E2X And whiteTwoCurrentLocationY = E2Y And isKing = False Then
-            whiteTwoMove(F1X, F1Y)
-        ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = G2X And whiteTwoCurrentLocationY = G2Y And isKing = False Then
-            whiteTwoMove(F1X, F1Y)
-        ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = E2X And whiteThreeCurrentLocationY = E2Y And isKing = False Then
-            whiteThreeMove(F1X, F1Y)
-        ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = G2X And whiteThreeCurrentLocationY = G2Y And isKing = False Then
-            whiteThreeMove(F1X, F1Y)
-        ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = E2X And whiteFourCurrentLocationY = E2Y And isKing = False Then
-            whiteFourMove(F1X, F1Y)
-        ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = G2X And whiteFourCurrentLocationY = G2Y And isKing = False Then
-            whiteFourMove(F1X, F1Y)
-        ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = E2X And whiteFiveCurrentLocationY = E2Y And isKing = False Then
-            whiteFiveMove(F1X, F1Y)
-        ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = G2X And whiteFiveCurrentLocationY = G2Y And isKing = False Then
-            whiteFiveMove(F1X, F1Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = E2X And whiteSixCurrentLocationY = E2Y And isKing = False Then
-            whiteSixMove(F1X, F1Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = G2X And whiteSixCurrentLocationY = G2Y And isKing = False Then
-            whiteSixMove(F1X, F1Y)
-        ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = G2X And whiteSevenCurrentLocationY = G2Y And isKing = False Then
-            whiteSevenMove(F1X, F1Y)
-        ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = E2X And whiteSevenCurrentLocationY = E2Y And isKing = False Then
-            whiteSevenMove(F1X, F1Y)
-        ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = E2X And whiteEightCurrentLocationY = E2Y And isKing = False Then
-            whiteEightMove(F1X, F1Y)
-        ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = G2X And whiteEightCurrentLocationY = G2Y And isKing = False Then
-            whiteEightMove(F1X, F1Y)
-        ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = G2X And whiteNineCurrentLocationY = G2Y And isKing = False Then
-            whiteNineMove(F1X, F1Y)
-        ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = E2X And whiteNineCurrentLocationY = E2Y And isKing = False Then
-            whiteNineMove(F1X, F1Y)
+        If isKing = False Then
+            If playerPiece = "W1" And whiteOneCurrentLocationX = G2X And whiteOneCurrentLocationY = G2Y Then
+                whiteOneMove(F1X, F1Y)
+            ElseIf playerPiece = "W1" And whiteOneCurrentLocationX = E2X And whiteOneCurrentLocationY = E2Y Then
+                whiteOneMove(F1X, F1Y)
+            ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = E2X And whiteTwoCurrentLocationY = E2Y Then
+                whiteTwoMove(F1X, F1Y)
+            ElseIf playerPiece = "W2" And whiteTwoCurrentLocationX = G2X And whiteTwoCurrentLocationY = G2Y Then
+                whiteTwoMove(F1X, F1Y)
+            ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = E2X And whiteThreeCurrentLocationY = E2Y Then
+                whiteThreeMove(F1X, F1Y)
+            ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = G2X And whiteThreeCurrentLocationY = G2Y Then
+                whiteThreeMove(F1X, F1Y)
+            ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = E2X And whiteFourCurrentLocationY = E2Y Then
+                whiteFourMove(F1X, F1Y)
+            ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = G2X And whiteFourCurrentLocationY = G2Y Then
+                whiteFourMove(F1X, F1Y)
+            ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = E2X And whiteFiveCurrentLocationY = E2Y Then
+                whiteFiveMove(F1X, F1Y)
+            ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = G2X And whiteFiveCurrentLocationY = G2Y Then
+                whiteFiveMove(F1X, F1Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = E2X And whiteSixCurrentLocationY = E2Y Then
+                whiteSixMove(F1X, F1Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = G2X And whiteSixCurrentLocationY = G2Y Then
+                whiteSixMove(F1X, F1Y)
+            ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = G2X And whiteSevenCurrentLocationY = G2Y Then
+                whiteSevenMove(F1X, F1Y)
+            ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = E2X And whiteSevenCurrentLocationY = E2Y Then
+                whiteSevenMove(F1X, F1Y)
+            ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = E2X And whiteEightCurrentLocationY = E2Y Then
+                whiteEightMove(F1X, F1Y)
+            ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = G2X And whiteEightCurrentLocationY = G2Y Then
+                whiteEightMove(F1X, F1Y)
+            ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = G2X And whiteNineCurrentLocationY = G2Y Then
+                whiteNineMove(F1X, F1Y)
+            ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = E2X And whiteNineCurrentLocationY = E2Y Then
+                whiteNineMove(F1X, F1Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = G2X And whiteTenCurrentLocationY = G2Y Then
+                whiteTenMove(F1X, F1Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = E2X And whiteTenCurrentLocationY = E2Y Then
+                whiteTenMove(F1X, F1Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = E2X And whiteElevenCurrentLocationY = E2Y Then
+                whiteElevenMove(F1X, F1Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = G2X And whiteElevenCurrentLocationY = G2Y Then
+                whiteElevenMove(F1X, F1Y)
+            End If
         End If
     End Sub
     Private Sub btnF3_Click(sender As Object, e As EventArgs) Handles btnF3.Click
-        If playerPiece = "W2" And whiteTwoCurrentLocationX = E4X And whiteTwoCurrentLocationY = E4Y And isKing = False Then
-            whiteTwoMove(F3X, F3Y)
-        ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = E4X And whiteThreeCurrentLocationY = E4Y And isKing = False Then
-            whiteThreeMove(F3X, F3Y)
-        ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = G4X And whiteThreeCurrentLocationY = G4Y And isKing = False Then
-            whiteThreeMove(F3X, F3Y)
-        ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = E4X And whiteFourCurrentLocationY = E4Y And isKing = False Then
-            whiteFourMove(F3X, F3Y)
-        ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = G4X And whiteFourCurrentLocationY = G4Y And isKing = False Then
-            whiteFourMove(F3X, F3Y)
-        ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = E4X And whiteFiveCurrentLocationY = E4Y And isKing = False Then
-            whiteFiveMove(F3X, F3Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = E4X And whiteSixCurrentLocationY = E4Y And isKing = False Then
-            whiteSixMove(F3X, F3Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = G4X And whiteSixCurrentLocationY = G4Y And isKing = False Then
-            whiteSixMove(F3X, F3Y)
-        ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = E4X And whiteSevenCurrentLocationY = E4Y And isKing = False Then
-            whiteSevenMove(F3X, F3Y)
-        ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = G4X And whiteSevenCurrentLocationY = G4Y And isKing = False Then
-            whiteSevenMove(F3X, F3Y)
-        ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = E4X And whiteEightCurrentLocationY = E4Y And isKing = False Then
-            whiteEightMove(F3X, F3Y)
-        ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = G4X And whiteEightCurrentLocationY = G4Y And isKing = False Then
-            whiteEightMove(F3X, F3Y)
-        ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = E4X And whiteNineCurrentLocationY = E4Y And isKing = False Then
-            whiteNineMove(F3X, F3Y)
-        ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = G4X And whiteNineCurrentLocationY = G4Y And isKing = False Then
-            whiteNineMove(F3X, F3Y)
+        If isKing = False Then
+            If playerPiece = "W2" And whiteTwoCurrentLocationX = E4X And whiteTwoCurrentLocationY = E4Y Then
+                whiteTwoMove(F3X, F3Y)
+            ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = E4X And whiteThreeCurrentLocationY = E4Y Then
+                whiteThreeMove(F3X, F3Y)
+            ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = G4X And whiteThreeCurrentLocationY = G4Y Then
+                whiteThreeMove(F3X, F3Y)
+            ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = E4X And whiteFourCurrentLocationY = E4Y Then
+                whiteFourMove(F3X, F3Y)
+            ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = G4X And whiteFourCurrentLocationY = G4Y Then
+                whiteFourMove(F3X, F3Y)
+            ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = E4X And whiteFiveCurrentLocationY = E4Y Then
+                whiteFiveMove(F3X, F3Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = E4X And whiteSixCurrentLocationY = E4Y Then
+                whiteSixMove(F3X, F3Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = G4X And whiteSixCurrentLocationY = G4Y Then
+                whiteSixMove(F3X, F3Y)
+            ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = E4X And whiteSevenCurrentLocationY = E4Y Then
+                whiteSevenMove(F3X, F3Y)
+            ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = G4X And whiteSevenCurrentLocationY = G4Y Then
+                whiteSevenMove(F3X, F3Y)
+            ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = E4X And whiteEightCurrentLocationY = E4Y Then
+                whiteEightMove(F3X, F3Y)
+            ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = G4X And whiteEightCurrentLocationY = G4Y Then
+                whiteEightMove(F3X, F3Y)
+            ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = E4X And whiteNineCurrentLocationY = E4Y Then
+                whiteNineMove(F3X, F3Y)
+            ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = G4X And whiteNineCurrentLocationY = G4Y Then
+                whiteNineMove(F3X, F3Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = G4X And whiteTenCurrentLocationY = G4Y Then
+                whiteTenMove(F3X, F3Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = E4X And whiteTenCurrentLocationY = E4Y Then
+                whiteTenMove(F3X, F3Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = G4X And whiteElevenCurrentLocationY = G4Y Then
+                whiteElevenMove(F3X, F3Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = E4X And whiteElevenCurrentLocationY = E4Y Then
+                whiteElevenMove(F3X, F3Y)
+            End If
         End If
     End Sub
     Private Sub btnF5_Click(sender As Object, e As EventArgs) Handles btnF5.Click
-        If playerPiece = "W3" And whiteThreeCurrentLocationX = E6X And whiteThreeCurrentLocationY = E6Y And isKing = False Then
-            whiteThreeMove(F5X, F5Y)
-        ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = G6X And whiteFourCurrentLocationY = G6Y And isKing = False Then
-            whiteFourMove(F5X, F5Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = E6X And whiteSixCurrentLocationY = E6Y And isKing = False Then
-            whiteSixMove(F5X, F5Y)
-        ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = G6X And whiteSevenCurrentLocationY = G6Y And isKing = False Then
-            whiteSevenMove(F5X, F5Y)
-        ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = E6X And whiteSevenCurrentLocationY = E6Y And isKing = False Then
-            whiteSevenMove(F5X, F5Y)
-        ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = G6X And whiteEightCurrentLocationY = G6Y And isKing = False Then
-            whiteEightMove(F5X, F5Y)
+        If isKing = False Then
+            If playerPiece = "W3" And whiteThreeCurrentLocationX = E6X And whiteThreeCurrentLocationY = E6Y Then
+                whiteThreeMove(F5X, F5Y)
+            ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = G6X And whiteFourCurrentLocationY = G6Y Then
+                whiteFourMove(F5X, F5Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = E6X And whiteSixCurrentLocationY = E6Y Then
+                whiteSixMove(F5X, F5Y)
+            ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = G6X And whiteSevenCurrentLocationY = G6Y Then
+                whiteSevenMove(F5X, F5Y)
+            ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = E6X And whiteSevenCurrentLocationY = E6Y Then
+                whiteSevenMove(F5X, F5Y)
+            ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = G6X And whiteEightCurrentLocationY = G6Y Then
+                whiteEightMove(F5X, F5Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = E6X And whiteTenCurrentLocationY = E6Y Then
+                whiteTenMove(F5X, F5Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = G6X And whiteElevenCurrentLocationY = G6Y Then
+                whiteElevenMove(F5X, F5Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = E6X And whiteElevenCurrentLocationY = E6Y Then
+                whiteElevenMove(F5X, F5Y)
+            End If
+        End If
+    End Sub
+    Private Sub btnF7_Click(sender As Object, e As EventArgs) Handles btnF7.Click
+        If isKing = False Then
+            If playerPiece = "W11" And whiteElevenCurrentLocationX = E8X And whiteElevenCurrentLocationY = E8Y Then
+                whiteElevenMove(F7X, F7Y)
+            End If
         End If
     End Sub
     'Column G
     Private Sub btnG2_Click(sender As Object, e As EventArgs) Handles btnG2.Click
-        If playerPiece = "W2" And whiteTwoCurrentLocationX = F3X And whiteTwoCurrentLocationY = F3Y Then
-            whiteTwoMove(G2X, G2Y)
-        ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = F3X And whiteThreeCurrentLocationY = F3Y Then
-            whiteThreeMove(G2X, G2Y)
-        ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = H3X And whiteThreeCurrentLocationY = H3Y Then
-            whiteThreeMove(G2X, G2Y)
-        ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = F3X And whiteFourCurrentLocationY = F3Y Then
-            whiteFourMove(G2X, G2Y)
-        ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = H3X And whiteFourCurrentLocationY = H3Y Then
-            whiteFourMove(G2X, G2Y)
-        ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = F3X And whiteFiveCurrentLocationY = F3Y Then
-            whiteFiveMove(G2X, G2Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = F3X And whiteSixCurrentLocationY = F3Y Then
-            whiteSixMove(G2X, G2Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = H3X And whiteSixCurrentLocationY = H3Y Then
-            whiteSixMove(G2X, G2Y)
-        ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = F3X And whiteSevenCurrentLocationY = F3Y Then
-            whiteSevenMove(G2X, G2Y)
-        ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = H3X And whiteSevenCurrentLocationY = H3Y Then
-            whiteSevenMove(G2X, G2Y)
-        ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = F3X And whiteEightCurrentLocationY = F3Y Then
-            whiteEightMove(G2X, G2Y)
-        ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = H3X And whiteEightCurrentLocationY = H3Y Then
-            whiteEightMove(G2X, G2Y)
-        ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = F3X And whiteNineCurrentLocationY = F3Y Then
-            whiteNineMove(G2X, G2Y)
+        If isKing = False Then
+            If playerPiece = "W2" And whiteTwoCurrentLocationX = F3X And whiteTwoCurrentLocationY = F3Y Then
+                whiteTwoMove(G2X, G2Y)
+            ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = F3X And whiteThreeCurrentLocationY = F3Y Then
+                whiteThreeMove(G2X, G2Y)
+            ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = H3X And whiteThreeCurrentLocationY = H3Y Then
+                whiteThreeMove(G2X, G2Y)
+            ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = F3X And whiteFourCurrentLocationY = F3Y Then
+                whiteFourMove(G2X, G2Y)
+            ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = H3X And whiteFourCurrentLocationY = H3Y Then
+                whiteFourMove(G2X, G2Y)
+            ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = F3X And whiteFiveCurrentLocationY = F3Y Then
+                whiteFiveMove(G2X, G2Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = F3X And whiteSixCurrentLocationY = F3Y Then
+                whiteSixMove(G2X, G2Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = H3X And whiteSixCurrentLocationY = H3Y Then
+                whiteSixMove(G2X, G2Y)
+            ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = F3X And whiteSevenCurrentLocationY = F3Y Then
+                whiteSevenMove(G2X, G2Y)
+            ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = H3X And whiteSevenCurrentLocationY = H3Y Then
+                whiteSevenMove(G2X, G2Y)
+            ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = F3X And whiteEightCurrentLocationY = F3Y Then
+                whiteEightMove(G2X, G2Y)
+            ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = H3X And whiteEightCurrentLocationY = H3Y Then
+                whiteEightMove(G2X, G2Y)
+            ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = F3X And whiteNineCurrentLocationY = F3Y Then
+                whiteNineMove(G2X, G2Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = H3X And whiteTenCurrentLocationY = H3Y Then
+                whiteTenMove(G2X, G2Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = F3X And whiteTenCurrentLocationY = F3Y Then
+                whiteTenMove(G2X, G2Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = F3X And whiteElevenCurrentLocationY = F3Y Then
+                whiteElevenMove(G2X, G2Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = H3X And whiteElevenCurrentLocationY = H3Y Then
+                whiteElevenMove(G2X, G2Y)
+            End If
         End If
     End Sub
     Private Sub btnG4_Click(sender As Object, e As EventArgs) Handles btnG4.Click
-        If playerPiece = "W3" And whiteThreeCurrentLocationX = F5X And whiteThreeCurrentLocationY = F5Y Then
-            whiteThreeMove(G4X, G4Y)
-        ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = H5X And whiteFourCurrentLocationY = H5Y Then
-            whiteFourMove(G4X, G4Y)
-        ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = F5X And whiteFourCurrentLocationY = F5Y Then
-            whiteFourMove(G4X, G4Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = F5X And whiteSixCurrentLocationY = F5Y Then
-            whiteSixMove(G4X, G4Y)
-        ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = F5X And whiteSevenCurrentLocationY = F5Y Then
-            whiteSevenMove(G4X, G4Y)
-        ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = H5X And whiteSevenCurrentLocationY = H5Y Then
-            whiteSevenMove(G4X, G4Y)
-        ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = F5X And whiteEightCurrentLocationY = F5Y Then
-            whiteEightMove(G4X, G4Y)
-        ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = H5X And whiteEightCurrentLocationY = H5Y Then
-            whiteEightMove(G4X, G4Y)
+        If isKing = False Then
+            If playerPiece = "W3" And whiteThreeCurrentLocationX = F5X And whiteThreeCurrentLocationY = F5Y Then
+                whiteThreeMove(G4X, G4Y)
+            ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = H5X And whiteFourCurrentLocationY = H5Y Then
+                whiteFourMove(G4X, G4Y)
+            ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = F5X And whiteFourCurrentLocationY = F5Y Then
+                whiteFourMove(G4X, G4Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = F5X And whiteSixCurrentLocationY = F5Y Then
+                whiteSixMove(G4X, G4Y)
+            ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = F5X And whiteSevenCurrentLocationY = F5Y Then
+                whiteSevenMove(G4X, G4Y)
+            ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = H5X And whiteSevenCurrentLocationY = H5Y Then
+                whiteSevenMove(G4X, G4Y)
+            ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = F5X And whiteEightCurrentLocationY = F5Y Then
+                whiteEightMove(G4X, G4Y)
+            ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = H5X And whiteEightCurrentLocationY = H5Y Then
+                whiteEightMove(G4X, G4Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = F5X And whiteTenCurrentLocationY = F5Y Then
+                whiteTenMove(G4X, G4Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = H5X And whiteElevenCurrentLocationY = H5Y Then
+                whiteElevenMove(G4X, G4Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = F5X And whiteElevenCurrentLocationY = F5Y Then
+                whiteElevenMove(G4X, G4Y)
+            End If
         End If
     End Sub
     Private Sub btnG6_Click(sender As Object, e As EventArgs) Handles btnG6.Click
@@ -558,39 +769,53 @@ Public Class Checkers
             whiteSevenMove(G6X, G6Y)
         ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = H7X And whiteEightCurrentLocationY = H7Y Then
             whiteEightMove(G6X, G6Y)
+        ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = F7X And whiteElevenCurrentLocationY = F7Y Then
+            whiteElevenMove(G6X, G6Y)
         End If
     End Sub
     'Column H
     Private Sub btnH1_Click(sender As Object, e As EventArgs) Handles btnH1.Click
-        If playerPiece = "W2" And whiteTwoCurrentLocationX = G2X And whiteTwoCurrentLocationY = G2Y Then
-            whiteTwoMove(H1X, H1Y)
-        ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = G2X And whiteThreeCurrentLocationY = G2Y Then
-            whiteThreeMove(H1X, H1Y)
-        ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = G2X And whiteFourCurrentLocationY = G2Y Then
-            whiteFourMove(H1X, H1Y)
-        ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = G2X And whiteFiveCurrentLocationY = G2Y Then
-            whiteFiveMove(H1X, H1Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = G2X And whiteSixCurrentLocationY = G2Y Then
-            whiteSixMove(H1X, H1Y)
-        ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = G2X And whiteSevenCurrentLocationY = G2Y Then
-            whiteSevenMove(H1X, H1Y)
-        ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = G2X And whiteEightCurrentLocationY = G2Y Then
-            whiteEightMove(H1X, H1Y)
-        ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = G2X And whiteNineCurrentLocationY = G2Y Then
-            whiteNineMove(H1X, H1Y)
+        If isKing = False Then
+            If playerPiece = "W2" And whiteTwoCurrentLocationX = G2X And whiteTwoCurrentLocationY = G2Y Then
+                whiteTwoMove(H1X, H1Y)
+            ElseIf playerPiece = "W3" And whiteThreeCurrentLocationX = G2X And whiteThreeCurrentLocationY = G2Y Then
+                whiteThreeMove(H1X, H1Y)
+            ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = G2X And whiteFourCurrentLocationY = G2Y Then
+                whiteFourMove(H1X, H1Y)
+            ElseIf playerPiece = "W5" And whiteFiveCurrentLocationX = G2X And whiteFiveCurrentLocationY = G2Y Then
+                whiteFiveMove(H1X, H1Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = G2X And whiteSixCurrentLocationY = G2Y Then
+                whiteSixMove(H1X, H1Y)
+            ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = G2X And whiteSevenCurrentLocationY = G2Y Then
+                whiteSevenMove(H1X, H1Y)
+            ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = G2X And whiteEightCurrentLocationY = G2Y Then
+                whiteEightMove(H1X, H1Y)
+            ElseIf playerPiece = "W9" And whiteNineCurrentLocationX = G2X And whiteNineCurrentLocationY = G2Y Then
+                whiteNineMove(H1X, H1Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = G2X And whiteTenCurrentLocationY = G2Y Then
+                whiteTenMove(H1X, H1Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = G2X And whiteElevenCurrentLocationY = G2Y Then
+                whiteElevenMove(H1X, H1Y)
+            End If
         End If
     End Sub
     Private Sub btnH3_Click(sender As Object, e As EventArgs) Handles btnH3.Click
-        If playerPiece = "W3" And whiteThreeCurrentLocationX = G4X And whiteThreeCurrentLocationY = G4Y Then
-            whiteThreeMove(H3X, H3Y)
-        ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = G4X And whiteFourCurrentLocationY = G4Y Then
-            whiteFourMove(H3X, H3Y)
-        ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = G4X And whiteSixCurrentLocationY = G4Y Then
-            whiteSixMove(H3X, H3Y)
-        ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = G4X And whiteSevenCurrentLocationY = G4Y Then
-            whiteSevenMove(H3X, H3Y)
-        ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = G4X And whiteEightCurrentLocationY = G4Y Then
-            whiteEightMove(H3X, H3Y)
+        If isKing = False Then
+            If playerPiece = "W3" And whiteThreeCurrentLocationX = G4X And whiteThreeCurrentLocationY = G4Y Then
+                whiteThreeMove(H3X, H3Y)
+            ElseIf playerPiece = "W4" And whiteFourCurrentLocationX = G4X And whiteFourCurrentLocationY = G4Y Then
+                whiteFourMove(H3X, H3Y)
+            ElseIf playerPiece = "W6" And whiteSixCurrentLocationX = G4X And whiteSixCurrentLocationY = G4Y Then
+                whiteSixMove(H3X, H3Y)
+            ElseIf playerPiece = "W7" And whiteSevenCurrentLocationX = G4X And whiteSevenCurrentLocationY = G4Y Then
+                whiteSevenMove(H3X, H3Y)
+            ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = G4X And whiteEightCurrentLocationY = G4Y Then
+                whiteEightMove(H3X, H3Y)
+            ElseIf playerPiece = "W10" And whiteTenCurrentLocationX = G4X And whiteTenCurrentLocationY = G4Y Then
+                whiteTenMove(H3X, H3Y)
+            ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = G4X And whiteElevenCurrentLocationY = G4Y Then
+                whiteElevenMove(H3X, H3Y)
+            End If
         End If
     End Sub
     Private Sub btnH5_Click(sender As Object, e As EventArgs) Handles btnH5.Click
@@ -600,26 +825,23 @@ Public Class Checkers
             whiteSevenMove(H5X, H5Y)
         ElseIf playerPiece = "W8" And whiteEightCurrentLocationX = G6X And whiteEightCurrentLocationY = G6Y Then
             whiteEightMove(H5X, H5Y)
+        ElseIf playerPiece = "W11" And whiteElevenCurrentLocationX = G6X And whiteElevenCurrentLocationY = G6Y Then
+            whiteElevenMove(H5X, H5Y)
         End If
     End Sub
     Private Sub btnReset_Click(sender As Object, e As EventArgs) Handles btnReset.Click
         whiteOneMove(whiteOneStartingLocationX, whiteOneStartingLocationY)
-
         whiteTwoMove(whiteTwoStartingLocationX, whiteTwoStartingLocationY)
-
         whiteThreeMove(whiteThreeStartingLocationX, whiteThreeStartingLocationY)
-
         whiteFourMove(whiteFourStartingLocationX, whiteFourStartingLocationY)
-
         whiteFiveMove(whiteFiveStartingLocationX, whiteFiveStartingLocationY)
-
         whiteSixMove(whiteSixStartingLocationX, whiteSixStartingLocationY)
-
         whiteSevenMove(whiteSevenStartingLocationX, whiteSevenStartingLocationY)
-
         whiteEightMove(whiteEightStartingLocationX, whiteEightStartingLocationY)
-
         whiteNineMove(whiteNineStartingLocationX, whiteNineStartingLocationY)
+        whiteTenMove(whiteTenStartingLocationX, whiteTenStartingLocationY)
+        whiteElevenMove(whiteElevenStartingLocationX, whiteElevenStartingLocationY)
+        whiteTwelveMove(whiteTwelveStartingLocationX, whiteTwelveStartingLocationY)
     End Sub
     Private Sub whiteOneMove(X, Y)
         picWhite1.Location = New Point(X, Y)
@@ -665,5 +887,20 @@ Public Class Checkers
         picWhite9.Location = New Point(X, Y)
         whiteNineCurrentLocationX = X
         whiteNineCurrentLocationY = Y
+    End Sub
+    Private Sub whiteTenMove(X, Y)
+        picWhite10.Location = New Point(X, Y)
+        whiteTenCurrentLocationX = X
+        whiteTenCurrentLocationY = Y
+    End Sub
+    Private Sub whiteElevenMove(X, Y)
+        picWhite11.Location = New Point(X, Y)
+        whiteElevenCurrentLocationX = X
+        whiteElevenCurrentLocationY = Y
+    End Sub
+    Private Sub whiteTwelveMove(X, Y)
+        picWhite12.Location = New Point(X, Y)
+        whiteTwelveCurrentLocationX = X
+        whiteTwelveCurrentLocationY = Y
     End Sub
 End Class
